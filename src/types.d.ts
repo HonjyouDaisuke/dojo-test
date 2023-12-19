@@ -4,5 +4,5 @@ export enum Status {
     submitted,
     reviewing,
     completed,
-}
+};
 
