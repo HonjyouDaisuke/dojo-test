@@ -1,4 +1,6 @@
-export interface ProblemData {
+import { JSXElementConstructor } from "react";
+
+export interface AlgorithmData {
     id: number;
     title: string;
     reviewer: string[];
@@ -10,4 +12,11 @@ export interface ProblemData {
     //timeComplexity: string;
     //spaceComplexity: string;
     //CodeData: string;
+};
+
+export enum AlgorithmStatusID {
+    notSubmit = 0,
+    submitted,
+    reviewing,
+    completed,
 };

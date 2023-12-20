@@ -1,4 +1,5 @@
-
+import { AlgorithmStatusID } from "@/common/types";
+import { statusStr } from "@/common/data";
 interface Props {
     statusID: number
 }
@@ -30,31 +31,13 @@ function selectIcon(statusID: number) {
     }
 }
 export default function StatusIcon({ statusID }: Props) {
-    let statusString: string = '';
-    switch (statusID) {
-        case 0:
-            statusString = "未提出";
-            break;
-        case 1:
-            statusString = "提出済み";
-            break;
-        case 2:
-            statusString = "レビュー中";
-            break;
-        case 3:
-            statusString = "完了";
-            break;
-        default:
-            statusString = "？？";
-            break;
-    }
 
     return (
         <div>
             <span className="inline-flex m-2 px-3 py-1 rounded-full text-sm border">
                 {selectIcon(statusID)}
                 <span className="ml-1">
-                    {statusString}
+                    {statusStr[statusID]}
                 </span>
             </span>
         </div >

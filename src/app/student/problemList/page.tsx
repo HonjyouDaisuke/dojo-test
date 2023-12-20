@@ -5,7 +5,9 @@ export default function ProblemList() {
     return (
         <div>
             <Header />
-            <ProblemTable />
+            <div className='flex justify-center px-4 py-4'>
+                <ProblemTable />
+            </div>
         </div>
     )
 }

@@ -6,7 +6,7 @@ const setReviewers = (reviewerName: string[]) => {
     const reviewerList = [];
     for (let i = 0; i < reviewerName.length; i++) {
         reviewerList.push(
-            <span className="inline-flex items-center m-2 px-3 py-1 bg-green-200 hover:bg-green-300 rounded-full text-sm font-semibold text-green-600">
+            <span key={i} className="inline-flex items-center m-2 px-3 py-1 bg-green-200 hover:bg-green-300 rounded-full text-sm font-semibold text-green-600">
                 <span className="ml-1">
                     {reviewerName[i]}
                 </span>
